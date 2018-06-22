@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Load</title>
+	<style>
+		@font-face {
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: optional;
+		}
+
+		@font-face {
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: optional;
+		}
+
+		.font-marketsans body {
+			font-family: "HelveticaNeueCyr", Roboto, Arial, sans-serif;
+		}
+	</style>
+	<!--загрузка кастомных шрифтов -->
+	<script>
+		var useCustomFont = ('fontDisplay' in document.documentElement.style) ||
+			(localStorage && localStorage.getItem('ebay-font'));
+		if (useCustomFont) {
+			document.documentElement.classList.add('font-marketsans');
+		}
+	</script>
+	<!--загрузка кастомных шрифтов -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script defer src="js/fontloader.js"></script>
+	<script defer src="js/lib.js"></script>
+	<script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+<!--start wrapper-->
+<div class="wrapper">
+
+	<!--start content-->
+	<div class="content">
+
+		<!--start header-->
+		<header class="header">
+			<div class="container">
+				<div class="header__blocks">
+					<div class="header__block">
+						<div class="logo">
+							<a class="logo__link" href="#" title="Перейти на главную страницу">
+								<img class="logo__pic" src="images/logo.svg"
+								     alt="Перейти на главную страницу">
+							</a>
+						</div>
+					</div>
+					<div class="header__block header__block_wide">
+						<div class="menu">
+							<nav>
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a class="menu__link" href="index.html">Statistics</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="list.html">List of Webmasters</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="load.html">Load Promo</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header__block">
+						<a href="#" class="logout">
+							<span class="icon icon_exit"></span>
+							<span class="logout__text">Exit</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--end header-->
+
+		<main>
+			<div class="container">
+				<!-- start load -->
+				<div class="load">
+					<ol class="load__list">
+						<li class="load__item">
+							<div class="load__inner">
+								<div class="load__block">
+									<div class="load__title">Name</div>
+									<div class="load__name">Banner #1</div>
+								</div>
+								<div class="load__block">
+									<div class="load__title">Size</div>
+									<div class="load__name">640x480</div>
+								</div>
+								<div class="load__block">
+
+									<label class="load__button file">
+										<input class="file__input" type="file">
+										<span class="file__text">Load</span>
+									</label>
+
+								</div>
+								<div class="load__block">
+
+									<button type="button" class="load__button">
+										<span class="file__text">Delete</span>
+									</button>
+
+								</div>
+							</div>
+
+						</li>
+					</ol>
+				</div>
+				<!-- end load -->
+			</div>
+		</main>
+
+	</div>
+
+</div>
+<!--end wrapper-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+</body>
+
+</html>

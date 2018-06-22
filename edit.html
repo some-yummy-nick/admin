@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Statistics</title>
+	<title>Edit</title>
 	<style>
 		@font-face {
 			font-family: "HelveticaNeueCyr";
@@ -45,7 +45,6 @@
 	<script defer src="js/fontloader.js"></script>
 	<script defer src="js/lib.js"></script>
 	<script defer src="js/script.js"></script>
-
 </head>
 
 <body>
@@ -98,11 +97,72 @@
 
 		<main>
 			<div class="container">
+
+				<a href="index.html" class="back">
+					<span class="icon icon_back"></span>
+					<span class="back__text">Back</span>
+				</a>
+
+				<!--start table-->
+				<table class="table">
+					<tr>
+						<th class="table__head table__big table__head_accent">ID</th>
+						<th class="table__head table__big table__head_accent">Email</th>
+						<th class="table__head table__big table__head_accent">Referrals</th>
+						<th class="table__head table__big table__head_accent">Transactions</th>
+						<th class="table__head table__big table__head_accent">Volume</th>
+						<th class="table__head table__big table__head_accent">Total income</th>
+						<th class="table__head table__big table__head_accent">Total withdrawal</th>
+						<th class="table__head table__big table__head_accent">Balance</th>
+						<th class="table__head table__big table__head_accent">Revenue Share</th>
+						<th class="table__head table__big table__head_accent">Label</th>
+						<th class="table__head table__empty"></th>
+					</tr>
+
+					<tr>
+						<td class="table__prop table__big">#100</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="#" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">
+							1650
+							<a href="info.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Info</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%
+							<a href="#" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a></td>
+						<td class="table__prop table__big">BestChange
+							<a href="#" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a></td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+
+				</table>
+				<!--end table-->
+
 				<!--start download-->
-				<a href="#" class="download">
+				<button type="button" class="download">
 					<span class="icon icon_download"></span>
 					<span class="download__text">Save as Excel file</span>
-				</a>
+				</button>
 				<!--end download-->
 
 				<!--start table-->

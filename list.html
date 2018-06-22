@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>List</title>
+	<style>
+		@font-face {
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: optional;
+		}
+
+		@font-face {
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: optional;
+		}
+
+		.font-marketsans body {
+			font-family: "HelveticaNeueCyr", Roboto, Arial, sans-serif;
+		}
+	</style>
+	<!--загрузка кастомных шрифтов -->
+	<script>
+		var useCustomFont = ('fontDisplay' in document.documentElement.style) ||
+			(localStorage && localStorage.getItem('ebay-font'));
+		if (useCustomFont) {
+			document.documentElement.classList.add('font-marketsans');
+		}
+	</script>
+	<!--загрузка кастомных шрифтов -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script defer src="js/fontloader.js"></script>
+	<script defer src="js/lib.js"></script>
+	<script defer src="js/script.js"></script>
+
+</head>
+
+<body>
+
+<!--start wrapper-->
+<div class="wrapper">
+
+	<!--start content-->
+	<div class="content">
+
+		<!--start header-->
+		<header class="header">
+			<div class="container">
+				<div class="header__blocks">
+					<div class="header__block">
+						<div class="logo">
+							<a class="logo__link" href="#" title="Перейти на главную страницу">
+								<img class="logo__pic" src="images/logo.svg"
+								     alt="Перейти на главную страницу">
+							</a>
+						</div>
+					</div>
+					<div class="header__block header__block_wide">
+						<div class="menu">
+							<nav>
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a class="menu__link" href="index.html">Statistics</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="list.html">List of Webmasters</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="load.html">Load Promo</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header__block">
+						<a href="#" class="logout">
+							<span class="icon icon_exit"></span>
+							<span class="logout__text">Exit</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--end header-->
+
+		<main>
+			<div class="container">
+				<!--start download-->
+				<button type="button" class="download">
+					<span class="icon icon_download"></span>
+					<span class="download__text">Save as Excel file</span>
+				</button>
+				<!--end download-->
+
+				<!--start table-->
+				<table class="table">
+					<tr>
+						<th class="table__head table__big table__head_accent">ID</th>
+						<th class="table__head table__big table__head_accent">Email</th>
+						<th class="table__head table__big table__head_accent">Referrals</th>
+						<th class="table__head table__big table__head_accent">Transactions</th>
+						<th class="table__head table__big table__head_accent">Volume</th>
+						<th class="table__head table__big table__head_accent">Total income</th>
+						<th class="table__head table__big table__head_accent">Total withdrawal</th>
+						<th class="table__head table__big table__head_accent">Balance</th>
+						<th class="table__head table__big table__head_accent">Revenue Share</th>
+						<th class="table__head table__big table__head_accent">Label</th>
+						<th class="table__head table__empty"></th>
+					</tr>
+
+					<tr>
+						<td class="table__prop table__big">#100</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="edit.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">1650</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%</td>
+						<td class="table__prop table__big">BestChange</td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="table__prop table__big">#99</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="edit.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">1650</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%</td>
+						<td class="table__prop table__big">BestChange</td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="table__prop table__big">#98</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="edit.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">1650</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%</td>
+						<td class="table__prop table__big">BestChange</td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="table__prop table__big">#97</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="edit.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">1650</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%</td>
+						<td class="table__prop table__big">BestChange</td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="table__prop table__big">#96</td>
+						<td class="table__prop table__big">mail@amil.ri
+							<a href="edit.html" class="edit">
+								<span class="icon icon_edit"></span>
+								<span class="table__text">Edit</span>
+							</a>
+						</td>
+						<td class="table__prop table__big">1650</td>
+						<td class="table__prop table__big">21355</td>
+						<td class="table__prop table__big">14</td>
+						<td class="table__prop table__big">24</td>
+						<td class="table__prop table__big">144</td>
+						<td class="table__prop table__big">4</td>
+						<td class="table__prop table__big">0.25%</td>
+						<td class="table__prop table__big">BestChange</td>
+						<td class="table__empty">
+							<button type="button" class="btn btn_freeze">Freeze</button>
+							<button type="button" class="btn btn_ban">Ban</button>
+						</td>
+					</tr>
+				</table>
+				<!--end table-->
+
+				<!-- start paginator -->
+				<div class="paginator">
+					<div class="paginator__wrapper">
+						<a href="#" class="paginator__button paginator__prev">Previous</a>
+						<ul class="paginator__list">
+							<li class="paginator__item"><a href="#" class="paginator__link">1</a></li>
+							<li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
+							<li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
+							<li class="paginator__item"><a href="#" class="paginator__link">4</a></li>
+							<li class="paginator__item"><span class="paginator__more">...</span></li>
+						</ul>
+						<a href="#" class="paginator__button paginator__next">Next</a>
+					</div>
+				</div>
+				<!-- end paginator -->
+			</div>
+		</main>
+
+	</div>
+
+</div>
+<!--end wrapper-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+</body>
+
+</html>

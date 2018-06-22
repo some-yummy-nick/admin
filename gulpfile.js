@@ -17,7 +17,7 @@ var NODE_ENV = process.env.NODE_ENV || 'development';
 var paths = {
 	styles: {
 		src: 'styles/style.scss',
-		all: 'styles/*.scss',
+		all: 'styles/**/*.scss',
 		build: 'css'
 	},
 	html: {
@@ -51,6 +51,7 @@ function styles() {
 					imagePath: "images/sprite",
 					spritePath: "images"
 				}),
+				require('postcss-inline-svg')({path:"images/icons/"}),
 				require('postcss-css-variables'),
 				require('postcss-rgb-plz'),
 

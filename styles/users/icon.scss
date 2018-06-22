@@ -1,0 +1,31 @@
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+
+	&_exit{
+		width: 21px;
+		height: 21px;
+		background-image: svg-load('exit.svg', fill=#000);
+	}
+
+	&_download{
+		width: 16px;
+		height: 16px;
+		background-image: svg-load('cloud-download.svg', fill=#000);
+	}
+
+	&_edit{
+		width: 16px;
+		height: 16px;
+		background-image: svg-load('user.svg', fill=#000);
+	}
+
+	&_back{
+		width: 10px;
+		height: 10px;
+		border-right: 2px solid #000;
+		border-bottom: 2px solid #000;
+		transform: rotate(135deg);
+	}
+}

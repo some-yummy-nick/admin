@@ -63,6 +63,10 @@ select {
     cursor: pointer; 
 }
 
+label{
+	margin-bottom: 0;
+}
+
 [disabled] {
   cursor: default;
 }

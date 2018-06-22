@@ -1,0 +1,16 @@
+.edit{
+	position: absolute;
+	width: 90%;
+	bottom: 5px;
+	display: block;
+	background: #ffeb3b;
+	color: #000000;
+
+	&:hover{
+		color: rgba(0,0,0,0.8);
+
+		.icon_edit{
+			background-image: svg-load('user.svg', fill=rgba(0,0,0,0.8));
+		}
+	}
+}
