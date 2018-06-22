@@ -40,7 +40,7 @@
 	}
 
 	&__big {
-		padding: 30px 5px;
+		padding: 20px 5px;
 	}
 
 	&__value {
@@ -58,6 +58,7 @@
 		position: relative;
 		border: 1px solid #000;
 		border-right: none;
+		padding: 30px 5px;
 
 		&:last-child {
 			border-right: 1px solid #000;

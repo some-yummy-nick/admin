@@ -3,4 +3,13 @@
 	padding: 5px 20px;
 	background: #fff;
 	color: #000;
+
+	&:hover{
+		color: rgba(0,0,0,0.8);
+
+		.icon_logout{
+			background-image: svg-load('exit.svg', fill=rgba(0,0,0,0.8));
+
+		}
+	}
 }

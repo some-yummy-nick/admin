@@ -31,7 +31,7 @@
 			font-family: "HelveticaNeueCyr", Roboto, Arial, sans-serif;
 		}
 	</style>
-	<!--загрузка кастомных шрифтов -->
+	<!--start загрузка кастомных шрифтов -->
 	<script>
 		var useCustomFont = ('fontDisplay' in document.documentElement.style) ||
 			(localStorage && localStorage.getItem('ebay-font'));
@@ -39,11 +39,14 @@
 			document.documentElement.classList.add('font-marketsans');
 		}
 	</script>
-	<!--загрузка кастомных шрифтов -->
-	<link rel="stylesheet" href="css/style.css">
+	<!--end загрузка кастомных шрифтов -->
 
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script defer src="js/fontloader.js"></script>
 	<script defer src="js/lib.js"></script>
+	<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<script defer src="js/chartlist.js"></script>
 	<script defer src="js/script.js"></script>
 </head>
 
@@ -78,7 +81,7 @@
 										<a class="menu__link" href="list.html">List of Webmasters</a>
 									</li>
 									<li class="menu__item">
-										<a class="menu__link" href="load.html">Load Promo</a>
+										<a class="menu__link" href="#">Load Promo</a>
 									</li>
 								</ul>
 							</nav>
@@ -86,7 +89,7 @@
 					</div>
 					<div class="header__block">
 						<a href="#" class="logout">
-							<span class="icon icon_exit"></span>
+							<span class="icon icon_logout"></span>
 							<span class="logout__text">Exit</span>
 						</a>
 					</div>
@@ -157,6 +160,22 @@
 
 				</table>
 				<!--end table-->
+				<div class="chart js-chart"></div>
+
+				<!-- start set -->
+				<div class="set">
+					<div class="set__wrapper">
+						<button type="button" class="set__button js-set-button" data-set="Total-Unique-User">Total Unique User</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Leads">Total Leads</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Trx">Total Trx</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Volume">Total Volume</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Income">Total Income</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Webmasters">Total Webmasters</button>
+						<button type="button" class="set__button js-set-button" data-set="Total-Webmaster-Income">Total Webmaster Income</button>
+						<button type="button" class="set__button js-set-button active" data-set="Total-Net-Income">Total Net Income</button>
+					</div>
+				</div>
+				<!-- end set -->
 
 				<!--start download-->
 				<button type="button" class="download">
@@ -191,69 +210,69 @@
 					</tr>
 					<tr>
 						<td class="table__value table__big">21.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">1</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">153</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">853</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">500</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">24</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">87</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">8</td>
 					</tr>
 					<tr>
 						<td class="table__value table__big">20.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">45</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">853</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">53</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">9</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">4</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">7</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">5</td>
 					</tr>
 					<tr>
-						<td class="table__value table__big">19.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big" >19.05.2018</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">900</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">6053</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">4453</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">113</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">504</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">57</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">15</td>
 					</tr>
 					<tr>
 						<td class="table__value table__big">18.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">1153</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">1053</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">53</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">33</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">4</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">77</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">10</td>
 					</tr>
 					<tr>
 						<td class="table__value table__big">17.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">153</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">1153</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">3353</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">3</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">204</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">87</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">10</td>
 					</tr>
 					<tr>
 						<td class="table__value table__big">16.05.2018</td>
-						<td class="table__value table__big">2153</td>
-						<td class="table__value table__big">1153</td>
-						<td class="table__value table__big">853</td>
-						<td class="table__value table__big">93</td>
-						<td class="table__value table__big">24</td>
-						<td class="table__value table__big">144</td>
-						<td class="table__value table__big">87</td>
-						<td class="table__value table__big">14</td>
+						<td class="table__value table__big js-value" data-set="Total-Unique-User">3153</td>
+						<td class="table__value table__big js-value" data-set="Total-Leads">2153</td>
+						<td class="table__value table__big js-value" data-set="Total-Trx">853</td>
+						<td class="table__value table__big js-value" data-set="Total-Volume">93</td>
+						<td class="table__value table__big js-value" data-set="Total-Income">24</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmasters">144</td>
+						<td class="table__value table__big js-value" data-set="Total-Webmaster-Income">7</td>
+						<td class="table__value table__big js-value" data-set="Total-Net-Income">14</td>
 					</tr>
 				</table>
 				<!--end table-->

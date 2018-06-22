@@ -1,0 +1,56 @@
+.set {
+	background: #616161;
+	margin-bottom: 20px;
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__button {
+		background: transparent;
+		border: none;
+		flex-grow: 1;
+		color: #ffffff;
+		padding: 10px 0;
+		padding-bottom: 20px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 5px;
+			background: #fff;
+			bottom: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: width 0.3s;
+		}
+
+		&:focus{
+			outline: none;
+		}
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+
+		}
+
+		&.active {
+			position: relative;
+
+			&:hover {
+
+				&:after {
+					background: rgba(255, 255, 255, 0.8);
+				}
+
+			}
+
+			&::after {
+				width: 90%;
+
+			}
+		}
+	}
+}

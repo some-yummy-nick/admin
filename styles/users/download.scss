@@ -7,9 +7,10 @@
 	background: #fff;
 	border: 1px solid currentColor;
 	color: #000000;
+	transition: background-color 0.3s, color 0.3s;
 
 	&:hover{
-		background: #9e9e9e;
+		background-color: #9e9e9e;
 		color: #ffffff;
 
 		.icon_download{
