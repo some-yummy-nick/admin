@@ -10,17 +10,25 @@
 	<title>Title</title>
 	<style>
 		@font-face {
-			font-family: "Geometria";
-			src: url('css/fonts/Geometria/Geometria.woff2') format('woff2'),
-			url('css/fonts/Geometria/Geometria.woff') format('woff'),
-			url('css/fonts/Geometria/Geometria.ttf') format('truetype');
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
 			font-weight: normal;
 			font-style: normal;
 			font-display: optional;
 		}
 
-		.font-marketsans .geometria {
-			font-family: "Geometria", Roboto, Arial, sans-serif;
+		@font-face {
+			font-family: "HelveticaNeueCyr";
+			src: url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+			url('css/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: optional;
+		}
+
+		.font-marketsans body{
+			font-family: "HelveticaNeueCyr", Roboto, Arial, sans-serif;
 		}
 	</style>
 	<!--загрузка кастомных шрифтов -->
