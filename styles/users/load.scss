@@ -5,12 +5,14 @@
 		padding: 0;
 		list-style-type: none;
 		counter-reset: li;
-		text-align: center;
+		margin-bottom: 20px;
+	}
 
+	&__item + &__item{
+		margin-top: 20px;
 	}
 
 	&__item {
-		display: inline-block;
 		position: relative;
 
 		&:before {
@@ -21,6 +23,13 @@
 			left: -2em;
 			width: 2em;
 			text-align: center;
+		}
+
+		&:not(:first-child){
+
+			.load__title{
+				display: none;
+			}
 		}
 
 	}
@@ -36,12 +45,12 @@
 	}
 
 	&__name{
-		width: 200px;
+		min-width: 200px;
 		padding:3px 10px;
 		border: 1px solid;
 	}
 
-	&__block+&__block{
+	&__block + &__block{
 		margin-left: 20px;
 	}
 }

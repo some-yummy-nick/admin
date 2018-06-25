@@ -61,7 +61,7 @@
 				<div class="header__blocks">
 					<div class="header__block">
 						<div class="logo">
-							<a class="logo__link" href="#" title="Перейти на главную страницу">
+							<a class="logo__link" href="index.html" title="Перейти на главную страницу">
 								<img class="logo__pic" src="images/logo.svg"
 								     alt="Перейти на главную страницу">
 							</a>
@@ -99,36 +99,64 @@
 			<div class="container">
 				<!-- start load -->
 				<div class="load">
-					<ol class="load__list">
-						<li class="load__item">
+					<ol class="load__list js-file-list">
+						<li class="load__item js-item">
 							<div class="load__inner">
 								<div class="load__block">
 									<div class="load__title">Name</div>
-									<div class="load__name">Banner #1</div>
+									<div class="load__name js-file-name" contenteditable="true">Banner #1</div>
 								</div>
 								<div class="load__block">
 									<div class="load__title">Size</div>
-									<div class="load__name">640x480</div>
+									<div class="load__name js-file-size" contenteditable="true">640x480</div>
 								</div>
 								<div class="load__block">
 
 									<label class="btn btn_border file">
-										<input class="file__input" type="file">
-										<span class="file__text">Load</span>
+										<input class="file__input js-file" type="file" accept=".jpg, .jpeg, .png">
+										Load
 									</label>
 
 								</div>
 								<div class="load__block">
 
-									<button type="button" class="btn btn_border">
-										<span class="file__text">Delete</span>
+									<button type="button" class="btn btn_border js-file-delete">Delete</button>
+
+								</div>
+							</div>
+						</li>
+						<li class="load__item js-item">
+							<div class="load__inner">
+								<div class="load__block">
+									<div class="load__title">Name</div>
+									<div class="load__name js-file-name" contenteditable="true">Banner #1</div>
+								</div>
+								<div class="load__block">
+									<div class="load__title">Size</div>
+									<div class="load__name js-file-size" contenteditable="true">640x480</div>
+								</div>
+								<div class="load__block">
+
+									<label class="btn btn_border file">
+										<input class="file__input js-file" type="file" accept=".jpg, .jpeg, .png">
+										Load
+									</label>
+
+								</div>
+								<div class="load__block">
+
+									<button type="button" class="btn btn_border js-file-delete">
+										Delete
 									</button>
 
 								</div>
 							</div>
-
 						</li>
 					</ol>
+					<button class="btn btn_border js-file-add-item">
+						<span class="icon icon_down"></span>
+						<span class="btn__text">Add new item</span>
+					</button>
 				</div>
 				<!-- end load -->
 			</div>
@@ -138,6 +166,35 @@
 
 </div>
 <!--end wrapper-->
+<template id="js-file-template">
+	<li class="load__item js-item">
+		<div class="load__inner">
+			<div class="load__block">
+				<div class="load__title">Name</div>
+				<div class="load__name js-file-name" contenteditable="true">Banner name</div>
+			</div>
+			<div class="load__block">
+				<div class="load__title">Size</div>
+				<div class="load__name js-file-size" contenteditable="true">640x480</div>
+			</div>
+			<div class="load__block">
+
+				<label class="btn btn_border file">
+					<input class="file__input js-file" type="file" accept=".jpg, .jpeg, .png">
+					<span class="file__text">Load</span>
+				</label>
+
+			</div>
+			<div class="load__block">
+
+				<button type="button" class="btn btn_border js-file-delete">
+					<span class="file__text">Delete</span>
+				</button>
+
+			</div>
+		</div>
+	</li>
+</template>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 </body>

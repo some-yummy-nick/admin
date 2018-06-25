@@ -28,4 +28,10 @@
 		border-bottom: 2px solid #000;
 		transform: rotate(135deg);
 	}
+
+	&_down{
+		width: 24px;
+		height: 24px;
+		background-image: svg-load('down.svg', fill=#000);
+	}
 }
