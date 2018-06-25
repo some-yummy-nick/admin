@@ -11,7 +11,8 @@ html {
 }
 
 body {
-	overflow-x: hidden;
+	min-width: 1000px;
+	//overflow-x: hidden;
 	font-weight: 400;
 	font-size: $font-size;
 	line-height: 1.42;
@@ -30,6 +31,7 @@ a {
 
 	&:focus{
 		color: $link_color_hover;
+		text-decoration: none;
 	}
 }
 

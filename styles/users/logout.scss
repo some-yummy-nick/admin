@@ -1,15 +1,22 @@
-.logout{
+.logout {
 	display: block;
 	padding: 5px 20px;
-	background: #fff;
+	background-color: #fff;
+	border: 1px solid transparent;
 	color: #000;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 
-	&:hover{
-		color: rgba(0,0,0,0.8);
+	&:hover {
+		border-color: #fff;
+		background-color: #000;
+		color: #ffffff;
 
-		.icon_logout{
-			background-image: svg-load('exit.svg', fill=rgba(0,0,0,0.8));
-
+		.icon_logout {
+			background-image: svg-load('exit.svg', fill=#fff);
 		}
+	}
+
+	&:active {
+		border-style: dashed;
 	}
 }

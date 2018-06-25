@@ -2,6 +2,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	background-repeat: no-repeat;
+	transition: background-image 0.3s;
 
 	&_logout{
 		width: 21px;
