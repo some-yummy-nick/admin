@@ -36,6 +36,7 @@ $(document).ready(function () {
 			var elem = parent.querySelector('.js-item');
 
 			var clone = elem.cloneNode(true);
+			clone.removeAttribute("hidden");
 			var newBannerName = clone.querySelector(".js-file-name");
 			newBannerName.innerHTML = "Banner name";
 			parent.appendChild(clone);
